@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+
+  .heading {
+    height: 10%;
+    border-bottom: 1px solid #ececec;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    h1 {
+      font-size: 3rem;
+      font-family: "Outfit", sans-serif;
+      font-weight: 600;
+      line-height: 3rem;
+      text-align: left;
+      sub {
+        a {
+          text-decoration: none;
+          background-color: black;
+          padding: 0.25rem 0.5rem;
+          color: white;
+          border-radius: 5px;
+        }
+      }
+    }
+    h5 {
+      font-family: "Outfit", sans-serif;
+      font-weight: 400;
+      background-color: black;
+      color: white;
+      padding: 0.5rem;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+  }
+
+  .color-container {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    .color {
+      height: 100%;
+      width: 500px;
+      background-color: white;
+      border-right: 0.5px solid #ececec;
+      display: flex;
+      align-items: center;
+      padding: 2rem;
+      .code-container {
+        .code {
+          font-size: 1.2rem;
+          font-weight: 700;
+          font-family: "Outfit", sans-serif;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+
+  .btn-container {
+    display: none;
+    button {
+      display: none;
+      font-family: "Outfit", sans-serif;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      transition: all cubic-bezier(0.19, 1, 0.22, 1);
+      background-color: black;
+      border: none;
+      border-radius: 5px;
+      color: white;
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+}
+
+@media (max-width: 940px) {
+  main {
+    .heading {
+      justify-content: start;
+      h1 {
+        font-size: 2rem;
+        text-align: center;
+      }
+      h5 {
+        display: none;
+      }
+    }
+
+    .color-container {
+      flex-direction: column;
+      .color {
+        width: 100%;
+      }
+    }
+
+    .btn-container {
+      height: 5%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      button {
+        display: block;
+      }
+    }
+  }
+}
